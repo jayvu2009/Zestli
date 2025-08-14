@@ -31,14 +31,23 @@
 </header>
 
     <!-- Hero Section -->
-    <section id="home" class="px-8 py-20 text-center">
-      <h2 class="text-4xl font-extrabold mb-4">Meals made with care, delivered with speed.</h2>
-      <p class="text-lg mb-6 max-w-xl mx-auto">
-        Zestli brings fresh meals straight to your door, each box paired with a handwritten note to warm your day.
-      </p>
-      <div class="flex justify-center gap-4">
-        <a href="#menu" class="inline-block bg-[#F75C2F] text-white text-lg font-semibold py-3 px-6 rounded-full hover:bg-[#e74c1a]">Order Now!</a>
-      </div>
+
+    <section class="bg-[#FAF4EA] py-28 px-8">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+
+            <!-- Text Content -->
+            <div class="md:w-1/2 text-center md:text-left mb-12 md:mb-0 pl-4">
+                <h1 class="text-4xl md:text-5xl font-bold text-[#245C44] mb-6">Meals made with care, delivered with speed.</h1>
+                <p class="text-lg md:text-xl text-[#245C44] mb-8">Zestli brings fresh meals straight to your door, each box paired with a handwritten note to warm your day.</p>
+                <a href="#menu" class="inline-block bg-[#F75C2F] text-white text-lg font-semibold py-3 px-6 rounded-full hover:bg-[#e74c1a]">Order Now!</a>
+            </div>
+
+            <!-- Image -->
+            <div class="md:w-1/2 pr-8">
+                <img src="images/image5.png" alt="delivery man">
+            </div>
+
+        </div>
     </section>
 
     <!-- Features Section -->
@@ -77,11 +86,12 @@
     </section>
 
     <!-- Menu Section -->
-     <section id="menu" class="bg-white py-20 px-8 text-center">
+    <section id="menu" class="bg-white py-20 px-8 text-center">
         <h2 class="text-3xl font-bold text-[#245C44] mb-12">Our Featured Meals</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <div class="border p-6 rounded-lg shadow-sm">
+             <img src="images/image4.png" alt="Sunshine Chicken Bowl" class="w-full h-48 object-cover rounded-md mb-4">
              <h3 class="text-xl font-semibold mb-2">Sunshine Chicken Bowl</h3>
              <p class="mb-4 text-[#555]">Lemon herb grilled chicken with roasted veggies and quinoa.</p>
              <p class="font-bold mb-4">$12.99</p>
@@ -89,6 +99,7 @@
             </div>
 
             <div class="border p-6 rounded-lg shadow-sm">
+             <img src="images/image4.png" alt="Sunshine Chicken Bowl" class="w-full h-48 object-cover rounded-md mb-4">
              <h3 class="text-xl font-semibold mb-2">Hearty Vegan Chili</h3>
              <p class="mb-4 text-[#555]">Slow-cooked beans, tomato, and spices with a side of cornbread.</p>
              <p class="font-bold mb-4">$10.49</p>
@@ -96,11 +107,16 @@
             </div>
 
             <div class="border p-6 rounded-lg shadow-sm">
+             <img src="images/image4.png" alt="Sunshine Chicken Bowl" class="w-full h-48 object-cover rounded-md mb-4">
              <h3 class="text-xl font-semibold mb-2">Zestli Signature Pasta</h3>
              <p class="mb-4 text-[#555]">Creamy garlic sauce, roasted mushrooms, and fresh basil.</p>
              <p class="font-bold mb-4">$11.75</p>
              <a href="#" class="bg-[#F75C2F] text-white px-4 py-2 rounded-full inline-block hover:bg-[#e74c1a]">Order Now</a>
             </div>
+        </div>
+
+        <div class="mt-12">
+            <a href="#menu" class="inline-block bg-[#245C44] text-white px-6 py-3 rounded-full text-lg font-medium hover:bg-[#1d4b37]">See More Meals</a>
         </div>
      </section>
 
