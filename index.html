@@ -23,10 +23,11 @@
   <h1 class="text-2xl font-bold text-[#F75C2F]">Zestli</h1>
   <nav class="space-x-6 text-sm font-medium">
     <a href="index.html" class="hover:underline">Home</a>
-    <a href="#" class="hover:underline">Menu</a>
+    <a href="#menu" class="hover:underline">Menu</a>
     <a href="blog.html" class="hover:underline">Blog</a>
     <a href="message-wall.html" class="hover:underline">Message Wall</a>
   </nav>
+
 </header>
 
     <!-- Hero Section -->
@@ -36,8 +37,7 @@
         Zestli brings fresh meals straight to your door, each box paired with a handwritten note to warm your day.
       </p>
       <div class="flex justify-center gap-4">
-        <button class="bg-[#F75C2F] text-white px-6 py-3 rounded-full hover:bg-orange-600">Download on App Store</button>
-        <button class="bg-white border border-[#245C44] text-[#245C44] px-6 py-3 rounded-full hover:bg-[#245C44] hover:text-white">Get it on Google Play</button>
+        <a href="#menu" class="inline-block bg-[#F75C2F] text-white text-lg font-semibold py-3 px-6 rounded-full hover:bg-[#e74c1a]">Order Now!</a>
       </div>
     </section>
 
@@ -76,6 +76,48 @@
       </div>
     </section>
 
+    <!-- Menu Section -->
+     <section id="menu" class="bg-white py-20 px-8 text-center">
+        <h2 class="text-3xl font-bold text-[#245C44] mb-12">Our Featured Meals</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div class="border p-6 rounded-lg shadow-sm">
+             <h3 class="text-xl font-semibold mb-2">Sunshine Chicken Bowl</h3>
+             <p class="mb-4 text-[#555]">Lemon herb grilled chicken with roasted veggies and quinoa.</p>
+             <p class="font-bold mb-4">$12.99</p>
+             <a href="#" class="bg-[#F75C2F] text-white px-4 py-2 rounded-full inline-block hover:bg-[#e74c1a]">Order Now</a>
+            </div>
+
+            <div class="border p-6 rounded-lg shadow-sm">
+             <h3 class="text-xl font-semibold mb-2">Hearty Vegan Chili</h3>
+             <p class="mb-4 text-[#555]">Slow-cooked beans, tomato, and spices with a side of cornbread.</p>
+             <p class="font-bold mb-4">$10.49</p>
+             <a href="#" class="bg-[#F75C2F] text-white px-4 py-2 rounded-full inline-block hover:bg-[#e74c1a]">Order Now</a>
+            </div>
+
+            <div class="border p-6 rounded-lg shadow-sm">
+             <h3 class="text-xl font-semibold mb-2">Zestli Signature Pasta</h3>
+             <p class="mb-4 text-[#555]">Creamy garlic sauce, roasted mushrooms, and fresh basil.</p>
+             <p class="font-bold mb-4">$11.75</p>
+             <a href="#" class="bg-[#F75C2F] text-white px-4 py-2 rounded-full inline-block hover:bg-[#e74c1a]">Order Now</a>
+            </div>
+        </div>
+     </section>
+
+    <!-- Share Your Story Section -->
+    <section id="contact" class="px-8 py-16">
+      <div class="max-w-3xl mx-auto text-center">
+        <h3 class="text-2xl font-bold mb-4">Share Your Story</h3>
+        <p class="mb-6 text-sm">Tell us how Zestli made your day better. Your story may inspire someone else — and you'll get a Buy 1 Get 1 voucher in return!</p>
+        <form action="message-wall.html" method="GET" class="grid gap-4">
+          <input type="text" name="name" placeholder="Name (kept private)" class="p-3 rounded border" />
+          <input type="email" name="email" placeholder="Email (for your voucher)" class="p-3 rounded border" />
+          <textarea name="story" rows="5" placeholder="Share your experience with Zestli..." class="p-3 rounded border"></textarea>
+          <button type="submit" class="bg-[#245C44] text-white px-6 py-3 rounded hover:bg-green-800">Submit Story</button>
+        </form>
+      </div>
+    </section>
+
     <!-- FAQs Section -->
     <section id="faqs" class="px-8 py-16 bg-white">
       <div class="max-w-3xl mx-auto">
@@ -97,25 +139,11 @@
       </div>
     </section>
 
-    <!-- Share Your Story Section -->
-    <section id="contact" class="px-8 py-16">
-      <div class="max-w-3xl mx-auto text-center">
-        <h3 class="text-2xl font-bold mb-4">Share Your Story</h3>
-        <p class="mb-6 text-sm">Tell us how Zestli made your day better. Your story may inspire someone else — and you'll get a Buy 1 Get 1 voucher in return!</p>
-        <form action="message-wall.html" method="GET" class="grid gap-4">
-          <input type="text" name="name" placeholder="Name (kept private)" class="p-3 rounded border" />
-          <input type="email" name="email" placeholder="Email (for your voucher)" class="p-3 rounded border" />
-          <textarea name="story" rows="5" placeholder="Share your experience with Zestli..." class="p-3 rounded border"></textarea>
-          <button type="submit" class="bg-[#245C44] text-white px-6 py-3 rounded hover:bg-green-800">Submit Story</button>
-        </form>
-      </div>
-    </section>
-
     <!-- Footer -->
-    <footer class="text-center text-sm py-6 bg-white border-t mt-6">
+    <footer class="bg-[#FAF4EA] text-center text-sm py-6 border-t mt-6">
       <div class="mb-2">
-        <button class="bg-[#F75C2F] text-white px-4 py-2 rounded-full mr-2">App Store</button>
-        <button class="bg-[#245C44] text-white px-4 py-2 rounded-full">Google Play</button>
+        <button class="bg-[#F75C2F] text-white px-6 py-3 rounded-full hover:bg-orange-600">Download on App Store</button>
+        <button class="bg-white border border-[#245C44] text-[#245C44] px-6 py-3 rounded-full hover:bg-[#245C44] hover:text-white">Get it on Google Play</button>
       </div>
       <p class="text-gray-500">&copy; 2025 Zestli. All rights reserved.</p>
     </footer>
