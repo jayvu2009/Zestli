@@ -20,15 +20,14 @@
   <body class="bg-[#FAF4EA] text-[#245C44]">
     <!-- Header -->
     <header class="flex justify-between items-center px-8 py-6 shadow-sm bg-white">
-      <h1 class="text-2xl font-bold text-[#F75C2F]">Zestli</h1>
-      <nav class="space-x-6 text-sm font-medium">
-        <a href="#home">Home</a>
-        <a href="#features">Features</a>
-        <a href="#faqs">FAQs</a>
-        <a href="blog.html">Blog</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+  <h1 class="text-2xl font-bold text-[#F75C2F]">Zestli</h1>
+  <nav class="space-x-6 text-sm font-medium">
+    <a href="index.html" class="hover:underline">Home</a>
+    <a href="#" class="hover:underline">Menu</a>
+    <a href="blog.html" class="hover:underline">Blog</a>
+    <a href="message-wall.html" class="hover:underline">Message Wall</a>
+  </nav>
+</header>
 
     <!-- Hero Section -->
     <section id="home" class="px-8 py-20 text-center">
@@ -98,16 +97,16 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Share Your Story Section -->
     <section id="contact" class="px-8 py-16">
       <div class="max-w-3xl mx-auto text-center">
-        <h3 class="text-2xl font-bold mb-4">Get in Touch</h3>
-        <p class="mb-6 text-sm">Have questions or feedback? We'd love to hear from you!</p>
-        <form class="grid gap-4">
-          <input type="text" placeholder="Name" class="p-3 rounded border" />
-          <input type="email" placeholder="Email" class="p-3 rounded border" />
-          <textarea rows="4" placeholder="Message" class="p-3 rounded border"></textarea>
-          <button type="submit" class="bg-[#245C44] text-white px-6 py-3 rounded hover:bg-green-800">Send Message</button>
+        <h3 class="text-2xl font-bold mb-4">Share Your Story</h3>
+        <p class="mb-6 text-sm">Tell us how Zestli made your day better. Your story may inspire someone else — and you'll get a Buy 1 Get 1 voucher in return!</p>
+        <form action="message-wall.html" method="GET" class="grid gap-4">
+          <input type="text" name="name" placeholder="Name (kept private)" class="p-3 rounded border" />
+          <input type="email" name="email" placeholder="Email (for your voucher)" class="p-3 rounded border" />
+          <textarea name="story" rows="5" placeholder="Share your experience with Zestli..." class="p-3 rounded border"></textarea>
+          <button type="submit" class="bg-[#245C44] text-white px-6 py-3 rounded hover:bg-green-800">Submit Story</button>
         </form>
       </div>
     </section>
