@@ -12,72 +12,53 @@
     body {
       font-family: 'Inter', sans-serif;
     }
+
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
 </head>
 
 <body class="bg-[#FAF4EA] text-[#245C44]">
 
   <!-- Header -->
-  <header class="flex justify-between items-center px-8 py-6 shadow-sm bg-white">
+  <header class="bg-white shadow-sm">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
         <div class="flex items-center space-x-2">
            <img src="images/logo.jpeg" alt="Zestli Logo" class="h-8 w-8 object-contain">
-           <h1 class="text-2xl font-bold text-[#F75C2F]">Zestli</h1>
+           <a href="index.html">
+             <h1 class="text-2xl font-bold text-[#F75C2F]">Zestli</h1>
+           </a>
         </div>
 
-        <nav class="space-x-6 text-sm font-medium">
+        <button
+          type="button"
+          class="rounded-full border border-[#245C44] px-4 py-2 text-sm font-semibold md:hidden"
+          data-menu-button
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          Menu
+        </button>
+
+        <nav class="hidden w-full flex-col gap-3 text-sm font-medium md:flex md:w-auto md:flex-row md:items-center md:gap-6" data-menu>
            <a href="index.html" class="hover:underline">Home</a>
-           <a href="#menu" class="hover:underline">Menu</a>
+           <a href="index.html#menu" class="hover:underline">Menu</a>
            <a href="blog.html" class="hover:underline">Blog</a>
            <a href="message-wall.html" class="hover:underline">Message Wall</a>
         </nav>
+    </div>
   </header>
 
 
   <!-- Message Wall Section -->
-  <section class="px-8 py-12 max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold mb-6 text-center">Share Your Story</h2>
-    <p class="text-center mb-10 text-sm">Read what others are saying about Zestli – and feel free to leave some love 💌</p>
+  <section class="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
+    <h2 class="mb-6 text-center text-3xl font-bold sm:text-4xl">Share Your Story</h2>
+    <p class="mb-10 text-center text-sm">Read what others are saying about Zestli – and feel free to leave some love 💌</p>
 
-    <!-- Example Post 1 -->
-    <div class="bg-white rounded-lg p-6 shadow mb-6">
-      <p class="italic mb-2">"I was having the worst day, and then my Zestli meal showed up with a handwritten note that made me tear up. Thank you!"</p>
-      <p class="text-sm text-gray-500 mb-4">– Anonymous</p>
-      <button class="text-sm text-[#F75C2F] underline" onclick="document.getElementById('reply1').classList.toggle('hidden')">Reply</button>
-      <form id="reply1" class="hidden mt-4 space-y-2">
-        <textarea class="w-full p-2 border rounded" rows="2" placeholder="Write your reply..."></textarea>
-        <input class="w-full p-2 border rounded" type="text" placeholder="Your name (private)" />
-        <input class="w-full p-2 border rounded" type="email" placeholder="Your email (private)" />
-        <button class="bg-[#245C44] text-white px-4 py-2 rounded hover:bg-green-800" type="submit">Send</button>
-      </form>
-    </div>
-
-    <!-- Example Post 2 -->
-    <div class="bg-white rounded-lg p-6 shadow mb-6">
-      <p class="italic mb-2">"I really love the way Zestli caring about my feeling, that is really really touched. And I just broke up with my boyfriend yesterday btw. He is so horrible!!!!"</p>
-      <p class="text-sm text-gray-500 mb-4">– Anonymous</p>
-      <button class="text-sm text-[#F75C2F] underline" onclick="document.getElementById('reply2').classList.toggle('hidden')">Reply</button>
-      <form id="reply2" class="hidden mt-4 space-y-2">
-        <textarea class="w-full p-2 border rounded" rows="2" placeholder="Write your reply..."></textarea>
-        <input class="w-full p-2 border rounded" type="text" placeholder="Your name (private)" />
-        <input class="w-full p-2 border rounded" type="email" placeholder="Your email (private)" />
-        <button class="bg-[#245C44] text-white px-4 py-2 rounded hover:bg-green-800" type="submit">Send</button>
-      </form>
-    </div>
-
-    <!-- Example Post 3 -->
-    <div class="bg-white rounded-lg p-6 shadow mb-6">
-      <p class="italic mb-2">"I had a rough shift at work. My manager had been unfairly critical again — small mistakes turned into big lectures, and I ended up crying in the back room. When I got home, I was too drained to cook, so I ordered from Zestli for the first time. I wasn’t expecting anything special… but inside the box was a short handwritten note that read: ‘You are doing your best. That’s more than enough.’ I sat there and cried again, but this time it wasn’t because of the day — it was because someone out there cared enough to write that. Thank you, Zestli. I needed that more than you know."</p>
-      <p class="text-sm text-gray-500 mb-4">– Anonymous</p>
-      <button class="text-sm text-[#F75C2F] underline" onclick="document.getElementById('reply2').classList.toggle('hidden')">Reply</button>
-      <form id="reply2" class="hidden mt-4 space-y-2">
-        <textarea class="w-full p-2 border rounded" rows="2" placeholder="Write your reply..."></textarea>
-        <input class="w-full p-2 border rounded" type="text" placeholder="Your name (private)" />
-        <input class="w-full p-2 border rounded" type="email" placeholder="Your email (private)" />
-        <button class="bg-[#245C44] text-white px-4 py-2 rounded hover:bg-green-800" type="submit">Send</button>
-      </form>
-    </div>
-
+    <div class="space-y-6" data-story-list></div>
     <p class="text-sm text-center text-gray-500 mt-10">New stories are added anonymously after submission ✨</p>
   </section>
+  <script src="scripts/story-wall.js"></script>
 </body>
 </html>

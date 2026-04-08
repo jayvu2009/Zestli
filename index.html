@@ -13,66 +13,80 @@
       body {
         font-family: 'Inter', sans-serif;
       }
+
+      html {
+        scroll-behavior: smooth;
+      }
     </style>
   </head>
 
   <body class="bg-[#FAF4EA] text-[#245C44]">
     
     <!-- Header -->
-    <header class="flex justify-between items-center px-8 py-6 shadow-sm bg-white">
-
+    <header class="bg-white shadow-sm">
+      <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
         <div class="flex items-center space-x-2">
-           <img src="images/logo.jpeg" alt="Zestli Logo" class="h-8 w-8 object-contain">
-           <a href="index.html">
-             <h1 class="text-2xl font-bold text-[#F75C2F]">Zestli</h1>
-           </a>
+          <img src="images/logo.jpeg" alt="Zestli Logo" class="h-8 w-8 object-contain">
+          <a href="index.html">
+            <h1 class="text-2xl font-bold text-[#F75C2F]">Zestli</h1>
+          </a>
         </div>
 
-        <nav class="space-x-6 text-sm font-medium">
-           <a href="index.html" class="hover:underline">Home</a>
-           <a href="#menu" class="hover:underline">Menu</a>
-           <a href="blog.html" class="hover:underline">Blog</a>
-           <a href="message-wall.html" class="hover:underline">Message Wall</a>
-        </nav>
+        <button
+          type="button"
+          class="rounded-full border border-[#245C44] px-4 py-2 text-sm font-semibold md:hidden"
+          data-menu-button
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          Menu
+        </button>
 
+        <nav class="hidden w-full flex-col gap-3 text-sm font-medium md:flex md:w-auto md:flex-row md:items-center md:gap-6" data-menu>
+          <a href="index.html" class="hover:underline">Home</a>
+          <a href="#menu" class="hover:underline">Menu</a>
+          <a href="blog.html" class="hover:underline">Blog</a>
+          <a href="message-wall.html" class="hover:underline">Message Wall</a>
+        </nav>
+      </div>
     </header>
 
     <!-- Hero Section -->
 
-    <section class="bg-[#FAF4EA] py-28 px-8">
-        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+    <section class="bg-[#FAF4EA] px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+        <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-10 md:flex-row">
 
             <!-- Text Content -->
-            <div class="md:w-1/2 text-center md:text-left mb-12 md:mb-0 pl-4">
-                <h1 class="text-4xl md:text-5xl font-bold text-[#245C44] mb-6">Meals made with care, delivered with speed.</h1>
-                <p class="text-lg md:text-xl text-[#245C44] mb-8">Zestli brings fresh meals straight to your door, each box paired with a handwritten note to warm your day.</p>
-                <a href="#menu" class="inline-block bg-[#F75C2F] text-white text-lg font-semibold py-3 px-6 rounded-full hover:bg-[#e74c1a]">Order Now!</a>
+            <div class="w-full text-center md:mb-0 md:w-1/2 md:pl-4 md:text-left">
+                <h1 class="mb-6 text-4xl font-bold text-[#245C44] sm:text-5xl">Meals made with care, delivered with speed.</h1>
+                <p class="mb-8 text-lg text-[#245C44] sm:text-xl">Zestli brings fresh meals straight to your door, each box paired with a handwritten note to warm your day.</p>
+                <a href="#menu" class="inline-block rounded-full bg-[#F75C2F] px-6 py-3 text-lg font-semibold text-white hover:bg-[#e74c1a]">Order Now!</a>
             </div>
 
             <!-- Image -->
-            <div class="md:w-1/2 pr-8">
-                <img src="images/image5.png" alt="delivery man">
+            <div class="w-full md:w-1/2 md:pr-4">
+                <img src="images/image5.png" alt="delivery man" class="mx-auto w-full max-w-md">
             </div>
 
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="px-8 py-16 bg-white">
+    <section id="features" class="bg-white px-4 py-14 sm:px-6 lg:px-8">
       <div class="max-w-4xl mx-auto text-center">
         <h3 class="text-2xl font-bold mb-8">Why Choose Zestli?</h3>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
+          <div class="rounded-2xl px-4 py-2">
             <img src="https://img.icons8.com/ios-filled/50/245C44/clock.png" class="mx-auto mb-4" />
             <p class="font-semibold">Fast Delivery</p>
             <p class="text-sm">Get your meals delivered in under 30 minutes.</p>
           </div>
-          <div>
+          <div class="rounded-2xl px-4 py-2">
             <img src="https://img.icons8.com/ios-filled/50/245C44/heart-with-arrow.png" class="mx-auto mb-4" />
             <p class="font-semibold">Personal Notes</p>
             <p class="text-sm">Each order comes with a heartfelt message inside.</p>
           </div>
-          <div>
+          <div class="rounded-2xl px-4 py-2">
             <img src="https://img.icons8.com/ios-filled/50/245C44/salad.png" class="mx-auto mb-4" />
             <p class="font-semibold">Fresh & Healthy</p>
             <p class="text-sm">Enjoy wholesome meals made with fresh ingredients.</p>
@@ -82,7 +96,7 @@
     </section>
 
     <!-- Blog Preview Section -->
-    <section id="blog" class="px-8 py-16">
+    <section id="blog" class="px-4 py-14 sm:px-6 lg:px-8">
       <div class="max-w-3xl mx-auto text-center">
         <h3 class="text-2xl font-bold mb-4">Zestli is here – Your new way to feel at home</h3>
         <p class="text-sm text-gray-700 mb-6">
@@ -93,11 +107,11 @@
     </section>
 
     <!-- Menu Section -->
-    <section id="menu" class="bg-white py-20 px-8 text-center">
+    <section id="menu" class="bg-white px-4 py-16 text-center sm:px-6 lg:px-8">
         <h2 class="text-3xl font-bold text-[#245C44] mb-12">Our Featured Meals</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div class="border p-6 rounded-lg shadow-sm">
+            <div class="rounded-2xl border p-6 shadow-sm">
              <img src="images/image4.png" alt="Sunshine Chicken Bowl" class="w-full h-48 object-cover rounded-md mb-4">
              <h3 class="text-xl font-semibold mb-2">Sunshine Chicken Bowl</h3>
              <p class="mb-4 text-[#555]">Lemon herb grilled chicken with roasted veggies and quinoa.</p>
@@ -105,7 +119,7 @@
              <a href="#" class="bg-[#F75C2F] text-white px-4 py-2 rounded-full inline-block hover:bg-[#e74c1a]">Order Now</a>
             </div>
 
-            <div class="border p-6 rounded-lg shadow-sm">
+            <div class="rounded-2xl border p-6 shadow-sm">
              <img src="images/image4.png" alt="Sunshine Chicken Bowl" class="w-full h-48 object-cover rounded-md mb-4">
              <h3 class="text-xl font-semibold mb-2">Hearty Vegan Chili</h3>
              <p class="mb-4 text-[#555]">Slow-cooked beans, tomato, and spices with a side of cornbread.</p>
@@ -113,7 +127,7 @@
              <a href="#" class="bg-[#F75C2F] text-white px-4 py-2 rounded-full inline-block hover:bg-[#e74c1a]">Order Now</a>
             </div>
 
-            <div class="border p-6 rounded-lg shadow-sm">
+            <div class="rounded-2xl border p-6 shadow-sm">
              <img src="images/image4.png" alt="Sunshine Chicken Bowl" class="w-full h-48 object-cover rounded-md mb-4">
              <h3 class="text-xl font-semibold mb-2">Zestli Signature Pasta</h3>
              <p class="mb-4 text-[#555]">Creamy garlic sauce, roasted mushrooms, and fresh basil.</p>
@@ -128,21 +142,22 @@
      </section>
 
     <!-- Share Your Story Section -->
-    <section id="contact" class="px-8 py-16">
+    <section id="contact" class="px-4 py-14 sm:px-6 lg:px-8">
       <div class="max-w-3xl mx-auto text-center">
         <h3 class="text-2xl font-bold mb-4">Share Your Story</h3>
         <p class="mb-6 text-sm">Tell us how Zestli made your day better. Your story may inspire someone else — and you'll get a Buy 1 Get 1 voucher in return!</p>
-        <form action="message-wall.html" method="GET" class="grid gap-4">
-          <input type="text" name="name" placeholder="Name (kept private)" class="p-3 rounded border" />
-          <input type="email" name="email" placeholder="Email (for your voucher)" class="p-3 rounded border" />
-          <textarea name="story" rows="5" placeholder="Share your experience with Zestli..." class="p-3 rounded border"></textarea>
-          <button type="submit" class="bg-[#245C44] text-white px-6 py-3 rounded hover:bg-green-800">Submit Story</button>
+        <form class="grid gap-4 text-left" data-story-form>
+          <input type="text" name="name" placeholder="Name (kept private)" class="w-full rounded-xl border p-3" />
+          <input type="email" name="email" placeholder="Email (for your voucher)" class="w-full rounded-xl border p-3" />
+          <textarea name="story" rows="5" placeholder="Share your experience with Zestli..." class="min-h-[180px] w-full rounded-xl border p-3"></textarea>
+          <button type="submit" class="rounded-xl bg-[#245C44] px-6 py-3 text-white hover:bg-green-800">Submit Story</button>
+          <p class="text-center text-sm text-[#245C44]" data-story-feedback aria-live="polite"></p>
         </form>
       </div>
     </section>
 
     <!-- FAQs Section -->
-    <section id="faqs" class="px-8 py-16 bg-white">
+    <section id="faqs" class="bg-white px-4 py-14 sm:px-6 lg:px-8">
       <div class="max-w-3xl mx-auto">
         <h3 class="text-2xl font-bold text-center mb-6">Frequently Asked Questions</h3>
         <div class="space-y-4">
@@ -165,7 +180,7 @@
     <!-- Footer -->
 <footer class="bg-[#FAF4EA] text-center text-sm py-6 border-t mt-6">
   <!-- Buttons -->
-  <div class="mb-4 space-y-2 md:space-y-0 md:space-x-4 flex flex-col md:flex-row justify-center items-center">
+  <div class="mb-4 flex flex-col items-center justify-center space-y-2 px-4 md:flex-row md:space-x-4 md:space-y-0">
     <button class="bg-[#F75C2F] text-white px-6 py-3 rounded-full hover:bg-orange-600">
       Download on App Store
     </button>
@@ -184,5 +199,6 @@
   <p class="text-gray-500">&copy; 2025 Zestli. All rights reserved.</p>
 </footer>
 
+  <script src="scripts/story-wall.js"></script>
 </body>
 </html>
